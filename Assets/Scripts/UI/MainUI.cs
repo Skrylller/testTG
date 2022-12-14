@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class MainUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MainUI : MonoBehaviour
 
     private DataContainer _dataContainer;
 
+    [Inject]
     public void Constr(DataContainer dataContainer)
     {
         _dataContainer = dataContainer;

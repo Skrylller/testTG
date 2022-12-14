@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 /// <summary>
 /// Инициализирует Фигуру.
@@ -18,6 +19,7 @@ public class Figure : MonoBehaviour
 
     private CompositeCollider3D _colliderConstructor;
 
+    [Inject]
     public void Constr(FigureModel model, ICenter center, DataContainer dataContainer)
     {
         _model = model;

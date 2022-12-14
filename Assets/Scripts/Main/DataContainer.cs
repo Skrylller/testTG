@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class DataContainer : MonoBehaviour
+public class DataContainer
 {
     private int _collisions;
     private DateTime _resetTime;
@@ -28,6 +28,11 @@ public class DataContainer : MonoBehaviour
         {
             return (int)(DateTime.UtcNow - _resetTime).TotalSeconds;
         }
+    }
+
+    public DataContainer()
+    {
+        Reset();
     }
 
     public void Reset()
