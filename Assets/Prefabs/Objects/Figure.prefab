@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dffbdda4db4def643a7917550230f303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _model: {fileID: 11400000, guid: d4782194e54718441ab8d4894d0dd619, type: 2}
-  _center: {fileID: 0}
+  _rotator: {fileID: 7356136445848917449}
+  _mover: {fileID: 7356136445848917452}
   figureParts:
   - {fileID: 3379140235638029044}
   - {fileID: 5527974810558661430}

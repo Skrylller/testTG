@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -11,6 +10,7 @@ public class BootstrapInstaller : MonoInstaller
     [SerializeField] private Transform _locationObj;
     [SerializeField] private FigureModel _figureModel;
     [SerializeField] private Center _center;
+
     [SerializeField] private List<Transform> _figureSpawnPoints;
     [SerializeField] private List<Figure> _figures;
 
@@ -19,6 +19,10 @@ public class BootstrapInstaller : MonoInstaller
         Container.Bind<DataContainer>().FromInstance(new DataContainer()).AsSingle();
         Container.Bind<FigureModel>().FromInstance(_figureModel).AsSingle();
         Container.Bind<ICenter>().FromInstance(_center).AsSingle();
+    }
+
+    public override void Start()
+    {
         InstantFigures();
     }
 

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -6,27 +5,23 @@ using Zenject;
 /// <summary>
 /// Инициализирует Фигуру.
 /// </summary>
-[RequireComponent(typeof(Rotator), typeof(MoverToCenter))]
 public class Figure : MonoBehaviour
 {
     private FigureModel _model;
-    private DataContainer _dataContainer;
+
+    [SerializeField] private Rotator _rotator;
+    [SerializeField] private MoverToCenter _mover;
 
     [SerializeField] private List<FigurePart> figureParts = new List<FigurePart>();
 
-    private Rotator _rotator;
-    private MoverToCenter _mover;
-
     private CompositeCollider3D _colliderConstructor;
+    private DataContainer _dataContainer;
 
     [Inject]
     public void Constr(FigureModel model, ICenter center, DataContainer dataContainer)
     {
         _model = model;
         _dataContainer = dataContainer;
-
-        _mover ??= GetComponent<MoverToCenter>();
-        _rotator ??= GetComponent<Rotator>();
 
         if (_colliderConstructor == null)
         {

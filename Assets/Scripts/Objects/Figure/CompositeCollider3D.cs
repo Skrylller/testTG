@@ -1,7 +1,6 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 /// <summary>
 /// ”правл€ет стокновением всей фигуры. Ќужен дл€ одноразового столкновени€, независимо от количества столкнувшихс€ частей.
