@@ -15,6 +15,6 @@ MonoBehaviour:
   _repulsiveForceRange: {x: 20, y: 50}
   _gravityForce: 15
   _stopDistance: 1
-  _rotationVector: {x: 10, y: 50, z: 100}
+  _rotationVector: {x: 25, y: 50, z: 100}
   _startMaterial: {fileID: 2100000, guid: e52429dbe16e58e47b30cd60f24381f0, type: 2}
   _collisionMaterial: {fileID: 2100000, guid: 0f728ca801d73e3498b343e7f684666a, type: 2}
