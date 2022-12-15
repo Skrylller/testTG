@@ -21,6 +21,10 @@ public class MoverToCenter : MonoBehaviour
         Move();
     }
 
+    /// <summary>
+    /// Отталкивает обьект при столкновении.
+    /// </summary>
+    /// <param name="collisionObj"></param>
     public void Collision(Collider collisionObj)
     {
         _moveSpeed = -UnityEngine.Random.Range(Math.Abs(_model.RepulsiveForceRange.x), Math.Abs(_model.RepulsiveForceRange.y));

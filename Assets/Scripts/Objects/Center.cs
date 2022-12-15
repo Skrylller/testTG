@@ -9,7 +9,7 @@ public class Center : MonoBehaviour, ICenter
 }
 
 /// <summary>
-/// Существует для скрытия обьекта центра. От него нам нужно только получать позицию.
+/// Существует для уникального DI контейнера и скрытия обьекта центра.
 /// </summary>
 public interface ICenter
 {

@@ -33,14 +33,14 @@ public class CompositeCollider3D
         }
     }
 
-    public void TriggerEnter(Collider collider)
+    private void TriggerEnter(Collider collider)
     {
         if (numCollisions <= 0)
             OnEnter?.Invoke(collider);
         numCollisions++;
     }
 
-    public void TriggerExit(Collider collider)
+    private void TriggerExit(Collider collider)
     {
         numCollisions--;
         if (numCollisions <= 0)
